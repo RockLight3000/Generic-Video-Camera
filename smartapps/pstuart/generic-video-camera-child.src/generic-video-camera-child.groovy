@@ -32,7 +32,11 @@ preferences {
         section("Add a Camera") {
         	input("CameraStreamPathList","enum", title: "Camera Stream Path", description: "Please enter your camera's streaming path", required:false, submitOnChange: true,
             options: [ //add your camera urls here
-	    ["rtsp://user:password@[ipaddress]:554//h264Preview_01_main"], //Reolink
+	        ["http://10.0.0.99/cgi-bin/api.cgi?cmd=Snap&channel=0&rs=123abc&user=admin&password=jodisorg"], //Reolink
+            ["rtsp://admin:jodisorg@10.0.0.98:554//h264Preview_01_main"], //Reolink
+            ["rtsp://admin:jodisorg@10.0.0.97:554//h264Preview_01_main"], //Reolink
+            ["rtsp://admin:jodisorg@10.0.0.96:554//h264Preview_01_main"], //Reolink
+            ["rtmp://10.0.0.98/bcs/channel0_fluent.bcs?channel=0&stream=0&user=admin&password=jodisorg"], //Reolink
             ["rtsp://user:password@[ipaddress]/Streaming/Channels/1":"Name of Camera"], //hikvision
             ["http://[ipaddress]:[port]/mjpeg.cgi?user=user&password=password&channel=1.mjpeg":"Name of Camera"], //dlink 932l
             ["http://user:password@[ipaddress]/nphMotionJpeg?Resolution=640x480&Quality=Standard":"Name of Camera"] //panasonic bl-140c
